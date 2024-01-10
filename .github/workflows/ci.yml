@@ -20,15 +20,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
-      - name: list of files.
-        run: |
-          ls -lha
-          pwd
-          sleep 5
+      # - name: list of files.
+      #   run: |
+      #     ls -lha
+      #     pwd
+      #     sleep 5
 
       - name: Sync files to S3 bucket
         run: |
-          aws s3 cp ./* s3://simple-website-app/
-      # - name: Upload to S3
-      #   run: |
-      #     aws s3 cp ./* s3://simple-website-app/
+         aws s3api list-buckets
