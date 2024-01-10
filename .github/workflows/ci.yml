@@ -23,5 +23,6 @@ jobs:
       - name: Sync files to S3 bucket
         run: |
          aws s3api list-buckets
+         zip -r deploy.zip ./*
          aws s3 sync . s3://simple-website-app/
 
