@@ -20,6 +20,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
-      - name: Upload to S3
+      - name: list of files.
         run: |
-          aws s3 cp ./* s3://simple-website-app/
+          ls -lha
+          pwd
+          sleep 5
+      # - name: Upload to S3
+      #   run: |
+      #     aws s3 cp ./* s3://simple-website-app/
