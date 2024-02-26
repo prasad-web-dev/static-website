@@ -30,7 +30,8 @@ jobs:
         run: |
          zip -r app.zip ./*
          ls -lha
-         aws s3 cp . s3://git-code-bucket-app/ --recursive
+         aws s3 sync . s3://git-code-bucket-app/ 
+        #--recursive
         #aws s3 sync app.zip s3://git-code-bucket-app/
         #zip -r deploy.zip ./*
         #aws s3api list-buckets
