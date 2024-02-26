@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -23,6 +23,7 @@ jobs:
       - name: Sync files to S3 bucket
         run: |
          aws s3api list-buckets
-         zip -r deploy.zip ./*
-         aws s3 sync . s3://simple-website-app/
+         aws s3 sync . s3://git-code-bucket-app/
+        #zip -r deploy.zip ./*
+
 
