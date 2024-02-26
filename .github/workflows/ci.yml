@@ -22,8 +22,8 @@ jobs:
 
       - name: Sync files to S3 bucket
         run: |
-         aws s3api list-buckets
          aws s3 sync . s3://git-code-bucket-app/
         #zip -r deploy.zip ./*
+        #aws s3api list-buckets
 
 
