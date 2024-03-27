@@ -35,7 +35,7 @@ jobs:
         run: |
          zip -r app.zip ./*
          ls -lha
-         aws s3 sync . s3://git-code-bucket-app/ 
+         aws s3 sync . s3://application-2024/ 
         #--recursive
         #aws s3 sync app.zip s3://git-code-bucket-app/
         #zip -r deploy.zip ./*
